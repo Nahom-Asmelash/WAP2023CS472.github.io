@@ -1,0 +1,16 @@
+div{
+    background-color: rgb(65, 65, 39);
+}
+h1, h3{
+    color: rgb(148, 148, 241);
+}
+
+div>p{
+    color: yellowgreen;
+    font-style: italic;
+}
+div>ul>li{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+
+}
