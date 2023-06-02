@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv {
+            margin: 0 auto; 
+            border: 2px solid rgb(156, 237, 210) ;
+        }
+
+        header {
+            background-color: rgb(209, 236, 227);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        p {
+            text-decoration: underline;
+        }
+
+        .form1 {
+            margin-left: 5px;
+            display: flex;
+            justify-content: space-between;
+            /* align-items:normal; */
+
+
+        }
+
+        .form2 {
+            margin-right: 5%;
+        }
+
+        footer {
+            background-color: lightgray;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .form1 input,
+        .form1 textarea {
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* #fname {
+            margin-left: 50px;
+        }
+
+        #lname {
+            margin-left: 50px;
+        }
+
+        #companyInstitution {}
+
+        #state {
+            margin-left: 50px;
+        }
+
+        #address {
+            margin-left: 50px;
+        }
+
+        #city {
+            margin-left: 50px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="maindiv">
+        <header>
+            <h2>WorkShop Registration</h2>
+            <div><select name="More Actions" id="more-actions"></div>
+            <option> More Actions</option>
+            </select>
+        </header>
+
+
+        <p class="underline">Register now while seats are available!</p>
+        <div class="form1">
+
+            <form action="" method="get" enctype="nova">
+                <label for="fname">First Name*</label>
+                <input type="text" id="fname" name="fname"><br>
+
+                <label for="lname">Last Name*</label>
+                <input type="text" id="lname" name="lname"><br>
+
+                <label for="companyInstitution">CompanyInstitution*</label>
+                <input type="text" id="companyInstitution" name="companyInstitution"><br>
+
+                <label for="address">Address*</label>
+                <textarea name="" id="address" cols="30" rows="10"></textarea> <br>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="fname"><br>
+
+                <label for="state">state/providence/Region</label>
+                <select name="" id="state">
+                    <option value="">-select-</option>
+                </select><br>
+
+                <label for="country">country</label>
+                <select name="" id="country">
+                    <option value="">-select-</option>
+                </select><br>
+                <label for="email">Email*</label>
+                <input type="text" id="email" name="email"><br>
+
+                <label for="phonenumber">Phone Number*</label>
+                <input type="text" id="phonenumber" name="phonenumber">
+            </form>
+          
+
+            <div class="form2">
+                <form action="">
+                    <p class="undeline">Lunch</p>
+                    <label for="mealpreference">Meal Preference</label>
+                    <select name="" id="mealpreference">
+                        <option value="">Vegiterian</option>
+                    </select><br>
+                    <p class="undeline">Payment Details</p><br>
+                    <label for="paymentmode">Payment Mode</label>
+                    <input type="checkbox" id="paymentmode"> cash <br>
+                    <input type="checkbox" id="paymentmode"> cheque <br>
+                    <input type="checkbox" id="paymentmode">Demand Draft <br>
+
+                    <label for="DD/cheque-No">DD/cheque No.</label>
+                    <input type="text" id="DD/cheque-No" name="DD/cheque-No"><br>
+
+                    <label for="Drawn-on-(Bank-Name)">Drawn-on-(Bank-Name)</label>
+                    <input type="text" id="Drawn-on-(Bank-Name)" name="Drawn-on-(Bank-Name)"><br>
+
+                    <label for="payable-at">Payable at</label>
+                    <input type="text" name="" id="payable-at"><br>
+            </div>
+
+            </form>
+        </div>
+        <div>
+            <footer>
+
+                <input type="submit" name="" id="" value="submit">
+                <input type="reset" value="reset">
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
