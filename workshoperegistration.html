@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Workshop Registration</title>
     <style>
         .maindiv {
-            margin: 0 auto; 
-            border: 2px solid rgb(156, 237, 210) ;
+            margin: 0 auto;
+            border: 2px solid rgb(156, 237, 210);
         }
 
         header {
@@ -23,137 +23,193 @@
             text-decoration: underline;
         }
 
-        .form1 {
-            margin-left: 5px;
+        .form-container {
             display: flex;
-            justify-content: space-between;
+        }
+
+        .userform {
+
+            /* justify-content: space-between; */
             /* align-items:normal; */
+            flex: 1;
+            padding-right: 20px;
 
 
         }
 
-        .form2 {
-            margin-right: 5%;
+        .lunchform {
+            flex: 1;
+            padding-left: 20px;
         }
 
-        footer {
+        .footer {
             background-color: lightgray;
-            margin-top: 20px;
+            margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-       
-        .form1 input,
-        .form1 textarea {
-            width: 100%;
-            padding: 5px;
+            padding: 10px;
         }
 
-        /* #fname {
-            margin-left: 50px;
+
+
+        /*-----------------------input type css*/
+        .form-group label,
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            display: block;
+            margin-bottom: 5px;
         }
 
-        #lname {
-            margin-left: 50px;
+        .form-group label {
+            display: inline-block;
+            width: 150px;
+            vertical-align: top;
         }
 
-        #companyInstitution {}
-
-        #state {
-            margin-left: 50px;
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            display: inline-block;
+            width: 200px;
         }
 
-        #address {
-            margin-left: 50px;
-        }
+        /*---------------------------------------------------btns--------------------------------------------------*/
+        #fm-submit {
+            background-color: #689268;
+            color: white;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 800;
+            margin-right: 15px;
+            font-size: medium;
+            border: none;
 
-        #city {
-            margin-left: 50px;
-        } */
+        }
     </style>
 </head>
 
 <body>
     <div class="maindiv">
         <header>
-            <h2>WorkShop Registration</h2>
-            <div><select name="More Actions" id="more-actions"></div>
-            <option> More Actions</option>
-            </select>
+           
+            <div style="display: flex; align-items: center;">
+                <h2 style="display: inline-block;margin-right:28px">Workshop Registration</h2>
+                <select name="More Actions" id="more-actions" style="display: inline-block;padding-right: 90px;">
+                    <option>More Actions</option>
+                </select>
+            </div>
+            
         </header>
 
 
         <p class="underline">Register now while seats are available!</p>
-        <div class="form1">
+        <div class="form-container">
+            <div class="userform">
+                <form action="" method="get" enctype="nova">
+                    <div class="form-group">
+                        <label for="fname">First Name*</label>
+                        <input type="text" id="fname" name="fname"><br>
+                    </div>
 
-            <form action="" method="get" enctype="nova">
-                <label for="fname">First Name*</label>
-                <input type="text" id="fname" name="fname"><br>
+                    <div class="form-group">
+                        <label for="lname">Last Name*</label>
+                        <input type="text" id="lname" name="lname"><br>
+                    </div>
 
-                <label for="lname">Last Name*</label>
-                <input type="text" id="lname" name="lname"><br>
+                    <div class="form-group">
+                        <label for="companyInstitution">CompanyInstitution*</label>
+                        <input type="text" id="companyInstitution" name="companyInstitution"><br>
+                    </div>
 
-                <label for="companyInstitution">CompanyInstitution*</label>
-                <input type="text" id="companyInstitution" name="companyInstitution"><br>
+                    <div class="form-group">
+                        <label for="address">Address*</label>
+                        <textarea id="address" cols="30" rows="10"></textarea> <br>
+                    </div>
 
-                <label for="address">Address*</label>
-                <textarea name="" id="address" cols="30" rows="10"></textarea> <br>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="fname"><br>
+                    </div>
 
-                <label for="city">City</label>
-                <input type="text" id="city" name="fname"><br>
+                    <div class="form-group">
+                        <label for="state">State/Province/Region</label>
+                        <select id="state" name="state">
+                            <option value="">-select-</option>
+                        </select><br>
+                    </div>
 
-                <label for="state">state/providence/Region</label>
-                <select name="" id="state">
-                    <option value="">-select-</option>
-                </select><br>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="">-select-</option>
+                        </select><br>
+                    </div>
 
-                <label for="country">country</label>
-                <select name="" id="country">
-                    <option value="">-select-</option>
-                </select><br>
-                <label for="email">Email*</label>
-                <input type="text" id="email" name="email"><br>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="text" id="email" name="email"><br>
+                    </div>
 
-                <label for="phonenumber">Phone Number*</label>
-                <input type="text" id="phonenumber" name="phonenumber">
-            </form>
-          
-
-            <div class="form2">
-                <form action="">
-                    <p class="undeline">Lunch</p>
-                    <label for="mealpreference">Meal Preference</label>
-                    <select name="" id="mealpreference">
-                        <option value="">Vegiterian</option>
-                    </select><br>
-                    <p class="undeline">Payment Details</p><br>
-                    <label for="paymentmode">Payment Mode</label>
-                    <input type="checkbox" id="paymentmode"> cash <br>
-                    <input type="checkbox" id="paymentmode"> cheque <br>
-                    <input type="checkbox" id="paymentmode">Demand Draft <br>
-
-                    <label for="DD/cheque-No">DD/cheque No.</label>
-                    <input type="text" id="DD/cheque-No" name="DD/cheque-No"><br>
-
-                    <label for="Drawn-on-(Bank-Name)">Drawn-on-(Bank-Name)</label>
-                    <input type="text" id="Drawn-on-(Bank-Name)" name="Drawn-on-(Bank-Name)"><br>
-
-                    <label for="payable-at">Payable at</label>
-                    <input type="text" name="" id="payable-at"><br>
+                    <div class="form-group">
+                        <label for="phonenumber">Phone Number*</label>
+                        <input type="text" id="phonenumber" name="phonenumber">
+                    </div>
+                </form>
             </div>
+            <div class="lunchform">
+                <form action="">
+                    <div class="form-group">
+                        <p class="underline">Lunch</p>
+                        <label for="mealpreference">Meal Preference</label>
+                        <select name="mealpreference" id="mealpreference">
+                            <option value="">Vegetarian</option>
+                        </select><br>
+                    </div>
 
-            </form>
-        </div>
-        <div>
-            <footer>
+                    <div class="form-group">
+                        <p class="underline">Payment Details</p><br>
+                        <label for="paymentmode">Payment Mode</label>
+                        <div>
+                            <input type="checkbox" id="cash" name="paymentmode">
+                            <label for="cash">Cash</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cheque" name="paymentmode">
+                            <label for="cheque">Cheque</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="demanddraft" name="paymentmode">
+                            <label for="demanddraft">Demand Draft</label>
+                        </div>
+                    
+                        <label for="ddchequeno">DD/Cheque No.</label>
+                        <input type="text" id="ddchequeno" name="ddchequeno"><br>
+                    
+                        <label for="drawnonbankname">Drawn-on (Bank Name)</label>
+                        <input type="text" id="drawnonbankname" name="drawnonbankname"><br>
+                    
+                        <label for="payableat">Payable at</label>
+                        <input type="text" id="payableat" name="payableat"><br>
+                    </div>
+                    
 
-                <input type="submit" name="" id="" value="submit">
-                <input type="reset" value="reset">
-            </footer>
+                    </div>
+                </form>
+
+            </div>
+            <div class="footer">
+                <input type="submit" name="" id="fm-submit" value="Submit">
+                <input type="reset" id="fm-submit" value="Reset">
+            </div>
         </div>
     </div>
+    <!-- <footer>
 
+        <input type="submit" name="" id="fm-submit" value="Submit">
+        <input type="reset" id="fm-submit" value="Reset">
+    </footer> -->
 </body>
 
 </html>

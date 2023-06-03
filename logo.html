@@ -9,7 +9,7 @@
     <style>
         #maindiv {
             border: 1px solid black;
-           
+
         }
 
         header {
@@ -29,33 +29,52 @@
             margin-left: 10px;
             margin-top: 10px;
         }
-        .product-list, .shopping-cart{
-margin-bottom: 20px;
-margin-left: 20px;
+
+        .product-list,
+        .shopping-cart {
+            margin-bottom: 20px;
+            margin-left: 20px;
         }
-        .table1, .table2{
+
+        .table1,
+        .table2 {
             width: 96%;
             border-collapse: collapse;
-           
+
         }
-        .table1 th, .table2 th, .table1 td, .table2 td{
+
+        .table1 th,
+        .table2 th,
+        .table1 td,
+        .table2 td {
             border: 1px solid black;
             padding: 8px;
             text-align: center;
         }
-        .shopping-cart >.table2>#total{
+
+        .shopping-cart>.table2>#total {
             margin: 5px;
             margin-left: 900px;
         }
-        .place-order{
+
+        .place-order {
             margin: 10px;
-           margin-left: 70%;
+            margin-left: 70%;
+
         }
-        .quantity-button button{
+
+        .quantity-button button {
             border: none;
         }
 
-        
+        #total {
+            text-align: right;
+        }
+
+        #btn {
+            background-color: lightblue;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -64,8 +83,8 @@ margin-left: 20px;
         <header>
 
             <div id="logo"><strong>Logo </strong></div>
-            <h2>Welcome, Tina</h2>
-            <button>Log out</button>
+            <h2>Welcome, Nahom</h2>
+            <button id="btn">Log out</button>
         </header>
         <div class="product-list">
             <h3>Product List</h3>
@@ -130,7 +149,7 @@ margin-left: 20px;
                         <td>29.99</td>
                         <td>290.99</td>
                         <td class="quantity-button">
-                            <button >-</button>
+                            <button>-</button>
                             <button>10</button>
                             <button>+</button>
                         </td>
@@ -142,7 +161,7 @@ margin-left: 20px;
 
             </table>
             <div class="place-order">
-                <button>Place order</button>
+                <button id="btn">Place order</button>
 
             </div>
 
