@@ -1,3 +1,4 @@
+// Exercise 1: What’s the output in the console?
 function b() {
     const y = 30;
     a();
