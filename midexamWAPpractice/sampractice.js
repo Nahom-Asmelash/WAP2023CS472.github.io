@@ -58,28 +58,29 @@ console.log('+++++++++++++++++++++');
 // }
 // console.log(x);
 console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
-let m=1;
-var n=9;
-function foo(flag){
-    console.log(m);
-    if(flag){
-        var m=flag;
-        m++;
-    }
-    console.log(m);
-}
-console.log(m);
-foo(1);
-foo(0);
+// let m=1;
+// var n=9;
+// function foo(flag){
+//     console.log(m);
+//     if(flag){
+//         var m=flag;
+//         m++;
+//     }
+//     console.log(m);
+// }
+// console.log(m);
+// foo(1);
+// foo(0);
 
 //  const obj ={
 //      salut:" ",
 //      greet:function(){
-//         this.salut="Hello"
+//         const self=this;
+//         self.salut="Hello"
 //         console.log(this.salut); //hello
 //         const setFrench=function(newSalute){
 //             // console.log(this);
-//             this.salut=newSalute;
+//             self.salut=newSalute;
             
 //         };
 //        setFrench("Bonjour");
@@ -89,18 +90,52 @@ foo(0);
 // obj.greet();
 
 console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&================");
-// const user={
-//     fname: 'josh',
-//     greet: function(){
-//         function setName(fname){
-//             this.fname=fname;
-//         }
-//         setName.bind(this,'edward')();
-//     }
+const user={
+    fname: 'josh',
+    greet: function(){
+        const self=this;
+        function setName(fname){
+            self.fname=fname;
+        }
+        setName('edward');
+    }
 
-// };
-// user.greet();
-// console.log(user.fname);
+};
+user.greet();
+console.log(user.fname);
+
+//-------------------FIXING--USING-----WRAPPER----------------------------------------
+//--------------------------USING ARROW FUNCTION------------------------
+const user1={
+    fname: 'josh',
+    greet: function(){
+        // const self=this;
+        // function setName(fname){
+        //     this.fname=fname;
+        // }
+        setName=fname=>this.fname=fname;
+        setName('edward');
+    }
+
+};
+user1.greet();
+console.log(user1.fname);
+
+//=============================================================
+
+const user3={
+    fname: 'josh',
+    greet: function(){
+        // const self=this;
+        function setName(fname){
+            this.fname=fname;
+        }
+        setName.bind(this,'edward')();
+    }
+
+};
+user3.greet();
+console.log(user3.fname);
 // let user = {
 //     firstName: "John",
 //     sayHi() {
