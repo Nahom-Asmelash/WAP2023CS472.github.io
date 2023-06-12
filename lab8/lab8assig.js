@@ -1,6 +1,6 @@
 "use strict";
+console.log('------------------Object Literal----------------------------');
 
-// ------------------Object Literal------------------------
 
 var student = {
   firstName: "Nahom",
@@ -26,8 +26,7 @@ studentArray[1].inputNewGrade(45);
 studentArray[1].computeAverageGrade();
 
 const totalGrades = studentArray.reduce(
-  (acc, cur) => acc.concat(cur.grades),
-  []
+  (acc, cur) => acc.concat(cur.grades),[]
 );
 
 const averageGrade =
@@ -38,7 +37,7 @@ console.log(averageGrade);
 
 
 
-// ------------------ Question 2 Using Constructor------------------------
+console.log('----------------- Question 2 Using Constructor------------------------');
 
 function Student(firstName,middleNamee,grades)
 {
@@ -66,8 +65,7 @@ studentArray[1].inputNewGrade(45);
 studentArray[1].computeAverageGrade();
 
 const $totalGrades = $studentArray.reduce(
-  (acc, cur) => acc.concat(cur.grades),
-  []
+  (acc, cur) => acc.concat(cur.grades),[]
 );
 
 const $averageGrade =
@@ -79,7 +77,7 @@ console.log($averageGrade);
 
 
 
-// ------------------ Question 3 Using Constructor------------------------
+console.log(' ------------------ Question 3 Using Constructor------------------------');
 
 
 Array.prototype.mysort= function() 
@@ -90,110 +88,119 @@ Array.prototype.mysort= function()
 let numbs= [4,1,2,5,9,7]
 console.log(numbs.mysort());
 
-//---------------------Question4---------------------
-// Object literal implementation
-// const LinkedList = {
-//   head: null,
-//   add(value) {
-//     const newNode = {
-//       value: value,
-//       next: null,
-//     };
-//     if (!this.head) {
-//       this.head = newNode;
-//     } else {
-//       let current = this.head;
-//       while (current.next) {
-//         current = current.next;
-//       }
-//       current.next = newNode;
-//     }
-//   },
-//   remove(value) {
-//     if (!this.head) {
-//       return;
-//     }
-//     if (this.head.value === value) {
-//       this.head = this.head.next;
-//       return;
-//     }
-//     let current = this.head;
-//     let previous = null;
-//     while (current && current.value !== value) {
-//       previous = current;
-//       current = current.next;
-//     }
-//     if (current) {
-//       previous.next = current.next;
-//     }
-//   },
-//   print() {
-//     let current = this.head;
-//     const values = [];
-//     while (current) {
-//       values.push(current.value);
-//       current = current.next;
-//     }
-//     console.log(`LinkedList{${values.join(",")}}`);
-//   },
-// };
+console.log('---------------------Question4: part-1 Object literal implementation---------------------');
 
-// // Constructor function implementation
-// function LinkedList() {
-//   this.head = null;
-// }
+const LinkedListObjLiteral = {
+  head: null,
+  add(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  },
+  remove(value) {
+    if (!this.head) {
+      return;
+    }
+    if (this.head.value === value) {
+      this.head = this.head.next;
+      return;
+    }
+    let current = this.head;
+    let previous = null;
+    while (current && current.value !== value) {
+      previous = current;
+      current = current.next;
+    }
+    if (current) {
+      previous.next = current.next;
+    }
+  },
+  print() {
+    let current = this.head;
+    const values = [];
+    while (current) {
+      values.push(current.value);
+      current = current.next;
+    }
+    console.log(`LinkedList{${values.join(",")}}`);
+  },
+};
 
-// LinkedList.prototype.add = function (value) {
-//   const newNode = {
-//     value: value,
-//     next: null,
-//   };
-//   if (!this.head) {
-//     this.head = newNode;
-//   } else {
-//     let current = this.head;
-//     while (current.next) {
-//       current = current.next;
-//     }
-//     current.next = newNode;
-//   }
-// };
+console.log('---------------------Question4: part 2 Constructor function implementation--------------------');
 
-// LinkedList.prototype.remove = function (value) {
-//   if (!this.head) {
-//     return;
-//   }
-//   if (this.head.value === value) {
-//     this.head = this.head.next;
-//     return;
-//   }
-//   let current = this.head;
-//   let previous = null;
-//   while (current && current.value !== value) {
-//     previous = current;
-//     current = current.next;
-//   }
-//   if (current) {
-//     previous.next = current.next;
-//   }
-// };
+function LinkedListConstructor() {
+  this.head = null;
+}
 
-// LinkedList.prototype.print = function () {
-//   let current = this.head;
-//   const values = [];
-//   while (current) {
-//     values.push(current.value);
-//     current = current.next;
-//   }
-//   console.log(`LinkedList{${values.join(",")}}`);
-// };
+LinkedListConstructor.prototype.add = function (value) {
+  const newNode = {
+    value: value,
+    next: null,
+  };
+  if (!this.head) {
+    this.head = newNode;
+  } else {
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+};
 
-// // Usage
-// let linkedlist = new LinkedList();
-// linkedlist.add(1);
-// linkedlist.add(2);
-// linkedlist.add(3);
-// linkedlist.print(); // Expected Result: LinkedList{1,2,3}
-// linkedlist.remove(2);
-// linkedlist.print(); // Expected Result: LinkedList{1,3}
+LinkedListConstructor.prototype.remove = function (value) {
+  if (!this.head) {
+    return;
+  }
+  if (this.head.value === value) {
+    this.head = this.head.next;
+    return;
+  }
+  let current = this.head;
+  let previous = null;
+  while (current && current.value !== value) {
+    previous = current;
+    current = current.next;
+  }
+  if (current) {
+    previous.next = current.next;
+  }
+};
+
+LinkedListConstructor.prototype.print = function () {
+  let current = this.head;
+  const values = [];
+  while (current) {
+    values.push(current.value);
+    current = current.next;
+  }
+  console.log(`LinkedList{${values.join(",")}}`);
+};
+
+// Usage
+let linkedListObjLiteral = Object.create(LinkedListObjLiteral);
+let linkedListConstructor = new LinkedListConstructor();
+linkedListObjLiteral.add(1);
+linkedListObjLiteral.add(2);
+linkedListObjLiteral.add(3);
+linkedListObjLiteral.print(); // Expected Result: LinkedList{1,2,3}
+linkedListObjLiteral.remove(2);
+linkedListObjLiteral.print(); // Expected Result: LinkedList{1,3}
+
+linkedListConstructor.add(1);
+linkedListConstructor.add(2);
+linkedListConstructor.add(3);
+linkedListConstructor.print(); // Expected Result: LinkedList{1,2,3}
+linkedListConstructor.remove(2);
+linkedListConstructor.print(); // Expected Result: LinkedList{1,3}
 

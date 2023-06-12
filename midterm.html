@@ -13,11 +13,33 @@
         div>p {
         background-color: yellow;
         } */
-        li .highlighted {
+        /* li .highlighted {
   color: red;
-  font-weight: bold;
+  font-weight: bold; */
+/* } */
+div {
+color: red;
+background-color: yellow;
 }
-
+p {
+color: cyan;
+background-color: gray;
+}
+span {
+color: green;
+background-color: blue;
+}
+.b > p {
+color: purple;
+background-color: pink;
+}
+div.b ul #item {
+color: AliceBlue;
+background-color: Beige;
+}
+li p{
+    color: red;
+}
      
 </style>
   
@@ -33,12 +55,25 @@
         </div>
         <p>Paragraph 4. Not in a div.</p>
         <p>Paragraph 5. Not in a div.</p> -->
-        <ul>
+        <!-- <ul>
             <li class="highlighted">Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
             <li class="highlighted">sadfd <span class="highlighted"> Item 4 Item 4 Item 4 </span> sdfasdf</li>
-          </ul>
+          </ul> -->
+          <div>
+            <p class=”a”>First</p>
+            <div class=”b”>
+            <p>
+            <span>Second</span>
+            </p>
+            <ul>
+            <li id=”item”>
+            <p>Third</p>
+            </li>
+            </ul>
+            </div>
+            </div>
           
        
     

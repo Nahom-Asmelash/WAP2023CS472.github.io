@@ -147,3 +147,88 @@ console.log(user3.fname);
 //      setTimeout(user.sayHi.bind(user), 2000); //works
 //      setTimeout(() => user.sayHi.call(user), 2000); //works
 //      setTimeout(() => user.sayHi.apply(user), 2000)
+
+// const animal = {
+//     walk: function(){
+//     if(!this.isSleeping){
+//     console.log('Animal Walk!!!');
+//     }
+//     },
+//     sleep: function(){
+//     this.isSleeping = true;
+//     }
+//     }
+//     let rabbit = Object.create(animal);
+   
+//     rabbit.sleep();
+//     rabbit.walk();
+//     // animal.walk();
+//     console.log(rabbit)
+
+    // const person={
+    
+    //     name:'edward',
+    //     prinName: function(greeting){
+    //         console.log('${greeting} ${this.name}');
+
+    //     }
+    // };
+    // function foo(){
+    //     const printNameFromPerson= person.prinName;
+    //     printNameFromPerson.call(person, 'edward');
+    // }
+    // foo();
+    const person = {
+        name: 'edward',
+        printName: function(greeting) {
+            console.log(`${greeting} ${this.name}`);
+        }
+    };
+    
+    function foo() {
+        const printNameFromPerson = person.printName;
+        printNameFromPerson.call(person, "HELLO"); // Using call to set the context
+       // printNameFromPerson.apply(person, ['Hello']); // Using apply to set the context
+    
+    }
+    
+    foo(); // Output: Hello edward
+    
+console.log('=================================================')
+// let x=1;
+// const g= b(2);
+// function b(){
+//     let x=3;
+//      var y =4;
+//      const a= function(x){
+//         x=5;
+//         y+=x;
+//         console.log(y);
+//      }
+//       return a;
+
+// }
+// var y=6;
+// g(7);
+
+
+console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+ let x = 1;
+var a = 5;
+var b = 10;
+var c = function(a, b, c) {
+console.log("x1: "+ x);
+console.log("a2: "+ a);
+var f = function() {
+b = a;
+console.log("b3: " + b);
+b = c;
+var a = 3;
+} 
+f();
+console.log("b4: " + b);
+  x = 6;
+}
+ c(8, 9, 7);
+console.log("b5: " + b);
+console.log("x6: "+ x);
